@@ -1,8 +1,45 @@
 {
   "name": "erc20-factory",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
+  "author": "Daniel Liu",
+  "description": "AnyCoin Factory",
+  "keywords": [
+    "BlockChain",
+    "Smart Contracts",
+    "Ethereum",
+    "Polygon",
+    "Mumbai",
+    "Solidity",
+    "Hardhat",
+    "ERC20",
+    "AnyCoin",
+    "AnyCoinFactory"
+  ],
+  "homepage": "https://github.com/gzliudan/erc20-factory#README",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gzliudan/erc20-factory"
+  },
+  "bugs": {
+    "url": "https://github.com/gzliudan/erc20-factory/issues",
+    "email": "139250065@qq.com"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.14.4",
+    "yarn": ">=1.22.0"
+  },
+  "scripts": {
+    "clean": "rm -rf coverage.json coverage cache artifacts",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "make": "yarn clean && yarn compile && yarn test",
+    "deploy:mumbai": "hardhat run --network mumbai ./deploy/deployAnyCoinFactory.js",
+    "deploy:polygon": "hardhat run --network polygon ./deploy/deployAnyCoinFactory.js",
+    "verify:mumbai": "hardhat run --network mumbai ./deploy/verifyAnyCoinFactory.js",
+    "verify:polygon": "hardhat run --network polygon ./deploy/verifyAnyCoinFactory.js"
+  },
   "devDependencies": {
     "@ethersproject/abi": "^5.4.7",
     "@ethersproject/providers": "^5.4.7",
