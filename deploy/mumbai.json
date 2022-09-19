@@ -1,0 +1,9 @@
+{
+    "chain_name": "mumbai",
+    "chain_id": 80001,
+    "anycoin_factory": {
+        "address": "0x41CfA4C7C764C39237A765788Eb0596C4B7A05bA",
+        "block": 28186046,
+        "hash": "0x63f47b3f6b8257c90513c3bd617370fcecaf70dc46371f7fbf776e4bd71cdf12"
+    }
+}
