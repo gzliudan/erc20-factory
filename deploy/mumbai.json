@@ -5,5 +5,43 @@
         "address": "0x41CfA4C7C764C39237A765788Eb0596C4B7A05bA",
         "block": 28186046,
         "hash": "0x63f47b3f6b8257c90513c3bd617370fcecaf70dc46371f7fbf776e4bd71cdf12"
-    }
+    },
+    "tokens": [
+        {
+            "address": "0x04597a1486b4F9d8284A4771703C1808D2a29b81",
+            "name": "Any WBTC",
+            "symbol": "WBTC2",
+            "decimals": 8
+        },
+        {
+            "address": "0xa79391e7B2b48a4Eb7F2228ef625a32716eE4E93",
+            "name": "Any YFI",
+            "symbol": "YFI2",
+            "decimals": 18
+        },
+        {
+            "address": "0xc16d215c621bbfd12999c9f456dab44db755ddd5",
+            "name": "Any MKR",
+            "symbol": "MKR2",
+            "decimals": 18
+        },
+        {
+            "address": "0x34006a403f5aba9f247a284e6278fbcb7c00df38",
+            "name": "Any AAVE",
+            "symbol": "AAVE2",
+            "decimals": 18
+        },
+        {
+            "address": "0x0a696e15754f9de196a939fecb8c412812d5881d",
+            "name": "Any UNI",
+            "symbol": "UNI2",
+            "decimals": 18
+        },
+        {
+            "address": "0xb6ae5ac95088f80f43a52f6be2b44906492b0d98",
+            "name": "Any USDC",
+            "symbol": "USDC2",
+            "decimals": 6
+        }
+    ]
 }
