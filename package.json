@@ -38,7 +38,9 @@
     "deploy:mumbai": "hardhat run --network mumbai ./deploy/deployAnyCoinFactory.js",
     "deploy:polygon": "hardhat run --network polygon ./deploy/deployAnyCoinFactory.js",
     "verify:mumbai": "hardhat run --network mumbai ./deploy/verifyAnyCoinFactory.js",
-    "verify:polygon": "hardhat run --network polygon ./deploy/verifyAnyCoinFactory.js"
+    "verify:polygon": "hardhat run --network polygon ./deploy/verifyAnyCoinFactory.js",
+    "verifyToken:mumbai": "hardhat verifyToken --network mumbai --index",
+    "verifyToken:polygon": "hardhat verifyToken --network polygon --index"
   },
   "devDependencies": {
     "@ethersproject/abi": "^5.4.7",

@@ -1,8 +1,12 @@
+/* global task */
+
 require('@nomicfoundation/hardhat-toolbox');
 require('@nomiclabs/hardhat-etherscan');
 require('@nomiclabs/hardhat-web3');
 
 require('dotenv').config();
+
+const { verifyAnyCoin } = require('./deploy/verifyAnyCoin');
 
 const { POLYGONSCAN_API_KEY } = process.env;
 
@@ -29,6 +33,12 @@ const POLYGON_RPC_LIST = [
 ];
 
 const ether = (n) => `${n}${'0'.repeat(18)}`;
+
+task('verifyToken', 'veify AnyCoin')
+  .addParam('index', 'The index of AnyCoin in deploy/<network>.json')
+  .setAction(async (taskArgs, hre) => {
+    await verifyAnyCoin(taskArgs.index, hre);
+  });
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
