@@ -8,7 +8,11 @@ require('dotenv').config();
 
 const { verifyAnyCoin } = require('./deploy/verifyAnyCoin');
 
-const { POLYGONSCAN_API_KEY } = process.env;
+const { ETHERSCAN_API_KEY, POLYGONSCAN_API_KEY } = process.env;
+
+if (!ETHERSCAN_API_KEY) {
+  console.log('Please set ETHERSCAN_API_KEY in file .env !');
+}
 
 if (!POLYGONSCAN_API_KEY) {
   console.log('Please set POLYGONSCAN_API_KEY in file .env !');
@@ -48,7 +52,7 @@ module.exports = {
         version: '0.8.17',
         settings: {
           optimizer: {
-            enabled: true,
+            enabled: false,
             runs: 200,
           },
         },
@@ -57,7 +61,7 @@ module.exports = {
         version: '0.7.6',
         settings: {
           optimizer: {
-            enabled: true,
+            enabled: false,
             runs: 200,
           },
         },
@@ -85,13 +89,40 @@ module.exports = {
       url: POLYGON_RPC_LIST[1],
       chainId: 137,
     },
+    apothem: {
+      url: 'https://erpc.apothem.network',
+      chainId: 51,
+    },
+    xinfin: {
+      url: 'https://erpc.xinfin.network',
+      chainId: 50,
+    },
   },
   etherscan: {
     apiKey: {
-      // polygon
-      polygon: POLYGONSCAN_API_KEY,
       polygonMumbai: POLYGONSCAN_API_KEY,
+      polygon: POLYGONSCAN_API_KEY,
+      apothem: ETHERSCAN_API_KEY,
+      xinfin: ETHERSCAN_API_KEY,
     },
+    customChains: [
+      {
+        network: 'apothem',
+        chainId: 51,
+        urls: {
+          apiURL: 'https://apothem.blocksscan.io/api',
+          browserURL: 'https://explorer.apothem.network',
+        },
+      },
+      {
+        network: 'xinfin',
+        chainId: 50,
+        urls: {
+          apiURL: 'https://xdc.blocksscan.io/api',
+          browserURL: 'https://explorer.xinfin.network',
+        },
+      },
+    ],
   },
   mocha: {
     timeout: 50000,

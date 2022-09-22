@@ -37,10 +37,16 @@
     "make": "yarn clean && yarn compile && yarn test",
     "deploy:mumbai": "hardhat run --network mumbai ./deploy/deployAnyCoinFactory.js",
     "deploy:polygon": "hardhat run --network polygon ./deploy/deployAnyCoinFactory.js",
+    "deploy:apothem": "hardhat run --network apothem ./deploy/deployAnyCoinFactory.js",
+    "deploy:xinfin": "hardhat run --network xinfin ./deploy/deployAnyCoinFactory.js",
     "verify:mumbai": "hardhat run --network mumbai ./deploy/verifyAnyCoinFactory.js",
     "verify:polygon": "hardhat run --network polygon ./deploy/verifyAnyCoinFactory.js",
+    "verify:apothem": "hardhat run --network apothem ./deploy/verifyAnyCoinFactory.js",
+    "verify:xinfin": "hardhat run --network xinfin ./deploy/verifyAnyCoinFactory.js",
     "verifyToken:mumbai": "hardhat verifyToken --network mumbai --index",
-    "verifyToken:polygon": "hardhat verifyToken --network polygon --index"
+    "verifyToken:polygon": "hardhat verifyToken --network polygon --index",
+    "verifyToken:apothem": "hardhat verifyToken --network apothem --index",
+    "verifyToken:xinfin": "hardhat verifyToken --network xinfin --index"
   },
   "devDependencies": {
     "@ethersproject/abi": "^5.4.7",
