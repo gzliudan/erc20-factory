@@ -1,0 +1,47 @@
+{
+    "chain_name": "apothem",
+    "chain_id": 51,
+    "anycoin_factory": {
+        "address": "xdcfD9F33ab143b1717D4784A420eE5A93A8CbBcABd",
+        "block": 39137678,
+        "hash": "0x826eb42962099277eb1175e281f04ce054cafd5133f6b880ab66e7fdc979f03a"
+    },
+    "tokens": [
+        {
+            "address": "xdc67acf9ee24f199a8aace6c2932d695778d06de92",
+            "name": "Any WBTC",
+            "symbol": "WBTC2",
+            "decimals": 8
+        },
+        {
+            "address": "xdc383fc34d3b8d0502f63e43d2fe9dd5f7acfe4d8a",
+            "name": "Any YFI",
+            "symbol": "YFI2",
+            "decimals": 18
+        },
+        {
+            "address": "xdc6d2ec1537ea05f7e4199beb73a7cdff238dd8cd1",
+            "name": "Any MKR",
+            "symbol": "MKR2",
+            "decimals": 18
+        },
+        {
+            "address": "xdc96f511e37918807b07f1b40d1f6504633f2414c1",
+            "name": "Any AAVE",
+            "symbol": "AAVE2",
+            "decimals": 18
+        },
+        {
+            "address": "xdcad93c83d6b8fb08235c102c3944ba259c2978b9b",
+            "name": "Any UNI",
+            "symbol": "UNI2",
+            "decimals": 18
+        },
+        {
+            "address": "xdc8ab2605f43d0d670a1a25d204a8f1976dde20264",
+            "name": "Any USDC",
+            "symbol": "USDC2",
+            "decimals": 6
+        }
+    ]
+}
