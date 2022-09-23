@@ -1,5 +1,10 @@
 // SPDX-License-Identifier: MIT
 
+function convertXdcAddress(address) {
+  const prefix = address.slice(0, 3).toLowerCase();
+  return prefix === 'xdc' ? '0x' + address.slice(3) : address;
+}
+
 function getEthers(hre) {
   if (!hre?.ethers) {
     hre = require('hardhat');
@@ -27,6 +32,7 @@ async function deployContract(signer, name, args = []) {
 }
 
 module.exports = {
+  convertXdcAddress,
   getDeployer,
   deployContract,
 };

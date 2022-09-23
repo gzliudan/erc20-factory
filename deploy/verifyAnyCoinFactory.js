@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 
 const hre = require('hardhat');
+const { convertXdcAddress } = require('./helpers');
 
 const CHAIN_NAME = hre.network.name;
 const CHAIN_ID = hre.network.config.chainId;
@@ -23,9 +24,11 @@ async function verifyContract(address, constructorArguments) {
 }
 
 async function verifyAnyCoinFactory() {
-  const contractAddress = contracts['anycoin_factory'].address;
-  console.log(`Verify AnyCoinFactory at ${contractAddress}`);
-  await verifyContract(contractAddress, []);
+  const originalAddress = contracts['anycoin_factory'].address;
+  console.log(`Verify AnyCoinFactory at ${originalAddress}`);
+
+  const normalAddress = convertXdcAddress(originalAddress);
+  await verifyContract(normalAddress, []);
 }
 
 verifyAnyCoinFactory()

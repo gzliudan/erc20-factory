@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: MIT
 
+const { convertXdcAddress } = require('./helpers');
+
 async function verifyAnyCoin(index) {
   const hre = require('hardhat');
 
@@ -15,9 +17,10 @@ async function verifyAnyCoin(index) {
   const token = contracts.tokens[index];
   console.log(`Verify AnyCoin: ${JSON.stringify(token, null, 4)}\n`);
 
+  const normalAddress = convertXdcAddress(token.address);
   await hre.run('verify:verify', {
     network: CHAIN_NAME,
-    address: token.address,
+    address: normalAddress,
     constructorArguments: [token.name, token.symbol, token.decimals],
   });
 }
